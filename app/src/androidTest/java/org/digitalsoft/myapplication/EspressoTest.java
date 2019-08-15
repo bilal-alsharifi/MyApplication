@@ -26,8 +26,6 @@ public class EspressoTest {
 
     @Test
     public void testMainFlow() {
-        disableAnimations();
-
         onView(withId(R.id.button))
                 .check(matches(isEnabled()));
 
@@ -37,18 +35,5 @@ public class EspressoTest {
         onView(withId(R.id.button))
                 .check(matches(not(isEnabled())));
 
-    }
-
-    private void disableAnimations() {
-        try {
-            UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-                    .executeShellCommand("settings put global transition_animation_scale 0");
-            UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-                    .executeShellCommand("settings put global window_animation_scale 0");
-            UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-                    .executeShellCommand("settings put global animator_duration_scale 0");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
