@@ -1,19 +1,11 @@
 package org.digitalsoft.myapplication;
 
-import android.content.pm.ActivityInfo;
-import android.os.Build;
-import android.util.Log;
-
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
-import androidx.test.uiautomator.UiDevice;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.io.IOException;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -30,13 +22,6 @@ public class EspressoTest {
 
     @Test
     public void testMainFlow() {
-//        onView(withId(R.id.button1))
-//                .perform(click());
-//
-//        onView(withId(R.id.button1))
-//                .check(matches(not(isEnabled())));
-
-
         onView(withId(R.id.button2))
                 .perform(click());
 
