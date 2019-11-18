@@ -8,8 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: "Run test suite"
-      uses: msfjarvis/setup-android@1.0
-      with:
-        entrypoint: ./gradlew
-        args: dependencies spotlessApply detekt assembleDebug
+      - name: setup-android
+        uses: msfjarvis/setup-android@0.2
