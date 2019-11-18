@@ -26,7 +26,7 @@ public class EspressoTest {
                .perform(click());
 
        onView(withId(R.id.button2))
-               .check(matches((isEnabled())));
+               .check(matches(not(isEnabled())));
 
     }
 }
