@@ -22,11 +22,11 @@ public class EspressoTest {
 
     @Test
     public void testMainFlow() {
-//        onView(withId(R.id.button2))
-//                .perform(click());
-//
-//        onView(withId(R.id.button2))
-//                .check(matches(not(isEnabled())));
+       onView(withId(R.id.button2))
+               .perform(click());
+
+       onView(withId(R.id.button2))
+               .check(matches(not(isEnabled())));
 
     }
 }
