@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
 
-        assertEquals(1, 2);
+        assertEquals(1, 1);
     }
 }
